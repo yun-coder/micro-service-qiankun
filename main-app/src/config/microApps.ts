@@ -25,6 +25,15 @@ export const microApps: MicroApp[] = [
       routerBase: '/vue',
     },
   },
+  {
+    name: 'typescript-app',
+    entry: '//localhost:8083',
+    container: '#subapp-container',
+    activeRule: '/typescript',
+    props: {
+      routerBase: '/typescript',
+    },
+  },
 ]
 
 export const menuItems = [
@@ -42,5 +51,10 @@ export const menuItems = [
     key: '/vue',
     label: 'Vue 应用',
     path: '/vue',
+  },
+  {
+    key: '/typescript',
+    label: 'TypeScript 应用',
+    path: '/typescript',
   },
 ]

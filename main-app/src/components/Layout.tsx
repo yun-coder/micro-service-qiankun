@@ -22,6 +22,7 @@ const Layout = () => {
     const path = location.pathname
     if (path.startsWith('/react')) return '/react'
     if (path.startsWith('/vue')) return '/vue'
+    if (path.startsWith('/typescript')) return '/typescript'
     return '/'
   }
 
