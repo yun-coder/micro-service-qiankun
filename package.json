@@ -1,0 +1,31 @@
+{
+  "name": "qiankun-project",
+  "version": "1.0.0",
+  "description": "Modern microservices architecture using qiankun",
+  "private": true,
+  "workspaces": [
+    "main-app",
+    "micro-apps/*"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm run install:main && npm run install:react && npm run install:vue",
+    "install:main": "cd main-app && npm install",
+    "install:react": "cd micro-apps/react-app && npm install",
+    "install:vue": "cd micro-apps/vue-app && npm install",
+    "dev": "concurrently \"npm run dev:main\" \"npm run dev:react\" \"npm run dev:vue\"",
+    "dev:main": "cd main-app && npm run dev",
+    "dev:react": "cd micro-apps/react-app && npm run dev",
+    "dev:vue": "cd micro-apps/vue-app && npm run dev",
+    "build": "npm run build:main && npm run build:react && npm run build:vue",
+    "build:main": "cd main-app && npm run build",
+    "build:react": "cd micro-apps/react-app && npm run build",
+    "build:vue": "cd micro-apps/vue-app && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
